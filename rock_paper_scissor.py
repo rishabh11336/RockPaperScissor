@@ -1,4 +1,4 @@
-#win = [(stone over scissor), (scissor over paper), (paper over stone)]
+#win = [(rock over scissor), (scissor over paper), (paper over rock)]
 # Draw = [A==B] 
 
 import random
@@ -9,8 +9,14 @@ while True:
 
     print(" Pick respective int scissor=1 paper=2 rock=3 Enter Below")
     Player = int(input())
-
+    
     if (Player,cpu) in win:
+        if cpu == 1:
+            print("cpu scissor")
+        elif cpu == 2:
+            print("cpu paper")
+        else:
+            print("cpu rock")
         print("WIN")
     elif (Player==cpu):
         print("DRAW")
